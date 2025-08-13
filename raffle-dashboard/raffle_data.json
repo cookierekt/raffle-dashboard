@@ -1,0 +1,363 @@
+{
+  "employees": {
+    "bir singh": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T12:27:47.163350"
+    },
+    "Vivien": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Zahra": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Okiki": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Dilpreet": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Stephanie Viana": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Navpreet": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Neha": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Irine": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Mari": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Beant": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Patricio": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Mary": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Charlotte": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Deepika": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Bisola": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Korry": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Yun-Lin": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Sherry": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Tetiana": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Jasjit": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Rajmeet": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Tazmul": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Harjasdeep": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Holly": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Ramjot": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Aswathy": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Vivian": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Kayla": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Ann Chukwudi": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Rajwinder": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Manpreet": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Simran": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Benjamin": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Jennifer": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Judith": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Ruksana": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Ramninder": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Christie": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Manisha": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Elizabeth": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Latifat": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Harmanjot": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Jasvir (Jessie)": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Mariana": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Rexy": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Khushboo": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Jenifer": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Navleen (NAV)": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Helen": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Argentina": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Poonampuneet Kaur": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Teshalework (Tesha)": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Arashdeep": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Kunika": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Leslie Ann": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Kevin": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Vanshaj": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Sierra": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    },
+    "Jilshadha": {
+      "entries": 0,
+      "activities": [],
+      "created_at": "2025-08-13T13:05:28.247150",
+      "imported_from_excel": true
+    }
+  }
+}

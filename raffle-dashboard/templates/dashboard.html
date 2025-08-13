@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Instead Quarterly Raffle Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="logo-container">
+                            <div class="logo-house">
+                                <div class="house-roof"></div>
+                                <div class="house-body">
+                                    <div class="house-window"></div>
+                                </div>
+                            </div>
+                            <div class="logo-text">
+                                <div class="logo-home">home</div>
+                                <div class="logo-instead">instead</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="title">Quarterly Raffle Dashboard</h1>
+                <div class="date-info">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span id="current-date">August 13, 2025</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="controls-section">
+                <div class="add-employee-form">
+                    <input type="text" id="employee-name" placeholder="Enter employee name" maxlength="50">
+                    <button id="add-employee-btn" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Add Employee
+                    </button>
+                </div>
+                <div class="actions">
+                    <button id="start-raffle-btn" class="btn btn-raffle">
+                        <i class="fas fa-dice"></i>
+                        Start Raffle
+                    </button>
+                    <button id="import-excel-btn" class="btn btn-success">
+                        <i class="fas fa-file-excel"></i>
+                        Import Excel
+                    </button>
+                    <button id="refresh-btn" class="btn btn-secondary">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh
+                    </button>
+                    <button id="reset-btn" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                        Reset All
+                    </button>
+                </div>
+            </div>
+
+            <div class="raffle-categories">
+                <div class="category high-impact">
+                    <div class="category-header">
+                        <h3><i class="fas fa-star"></i> High-Impact Actions</h3>
+                        <span class="entry-value">3 Entries Each</span>
+                    </div>
+                    <ul class="category-items">
+                        <li>Perfect attendance for the entire quarter</li>
+                        <li>Referral of a new Care Professional who works at least one shift</li>
+                        <li>Covering 5 or more open/last-minute shifts in the quarter</li>
+                    </ul>
+                </div>
+
+                <div class="category strong-contributions">
+                    <div class="category-header">
+                        <h3><i class="fas fa-medal"></i> Strong Contributions</h3>
+                        <span class="entry-value">2 Entries Each</span>
+                    </div>
+                    <ul class="category-items">
+                        <li>Covering 1-4 open/last-minute shifts</li>
+                        <li>Completing all required training on time for the quarter</li>
+                        <li>Going above and beyond in a way recognized by office staff</li>
+                        <li>Participating in at least two company events or meetings during the quarter</li>
+                    </ul>
+                </div>
+
+                <div class="category everyday-excellence">
+                    <div class="category-header">
+                        <h3><i class="fas fa-trophy"></i> Everyday Excellence</h3>
+                        <span class="entry-value">1 Entry Each</span>
+                    </div>
+                    <ul class="category-items">
+                        <li>Wearing the proper uniform and badge consistently during shifts</li>
+                        <li>Submitting all care notes accurately and on time for the quarter</li>
+                        <li>Celebrating a work anniversary during the quarter</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="employees-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> Employee Raffle Entries</h2>
+                    <div class="stats">
+                        <span id="total-employees">0</span> employees • 
+                        <span id="total-entries">0</span> total entries
+                    </div>
+                </div>
+                <div id="employees-grid" class="employees-grid">
+                    <!-- Employee cards will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Raffle Modal -->
+    <div id="raffle-modal" class="modal">
+        <div class="modal-content raffle-modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-trophy"></i> Quarterly Raffle</h3>
+                <span class="close" id="close-raffle-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="raffle-container">
+                    <div class="raffle-wheel-container">
+                        <div class="raffle-wheel" id="raffle-wheel">
+                            <div class="wheel-center">
+                                <i class="fas fa-dice"></i>
+                            </div>
+                            <div class="wheel-segments" id="wheel-segments">
+                                <!-- Segments will be generated by JavaScript -->
+                            </div>
+                            <div class="wheel-pointer"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="raffle-controls">
+                        <div class="raffle-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Participants:</span>
+                                <span class="stat-value" id="raffle-participants">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Total Entries:</span>
+                                <span class="stat-value" id="raffle-total-entries">0</span>
+                            </div>
+                        </div>
+                        
+                        <button id="spin-wheel-btn" class="btn btn-raffle btn-large">
+                            <i class="fas fa-play"></i>
+                            Spin the Wheel!
+                        </button>
+                        
+                        <div class="raffle-result" id="raffle-result" style="display: none;">
+                            <div class="winner-announcement">
+                                <h2>🎉 Congratulations! 🎉</h2>
+                                <div class="winner-name" id="winner-name"></div>
+                                <div class="winner-details" id="winner-details"></div>
+                                <button id="new-raffle-btn" class="btn btn-primary">
+                                    <i class="fas fa-redo"></i>
+                                    Start New Raffle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="participants-list">
+                    <h4><i class="fas fa-users"></i> Participants & Their Chances</h4>
+                    <div class="participants-grid" id="participants-grid">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Excel Import Modal -->
+    <div id="excel-import-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-file-excel"></i> Import Employees from Excel</h3>
+                <span class="close" id="close-excel-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="upload-section">
+                    <div class="upload-area" id="upload-area">
+                        <div class="upload-content">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <h4>Drag & Drop Excel File Here</h4>
+                            <p>or click to browse</p>
+                            <input type="file" id="excel-file" accept=".xlsx,.xls" style="display: none;">
+                            <button type="button" id="browse-file-btn" class="btn btn-primary">
+                                <i class="fas fa-folder-open"></i> Browse Files
+                            </button>
+                        </div>
+                    </div>
+                    <div class="file-info" id="file-info" style="display: none;">
+                        <div class="selected-file">
+                            <i class="fas fa-file-excel"></i>
+                            <span id="file-name"></span>
+                            <span id="file-size"></span>
+                        </div>
+                        <button type="button" id="upload-btn" class="btn btn-success">
+                            <i class="fas fa-upload"></i> Import Employees
+                        </button>
+                    </div>
+                </div>
+                <div class="import-help">
+                    <h5><i class="fas fa-info-circle"></i> Supported File Formats</h5>
+                    <ul>
+                        <li>.xlsx (Excel 2007+)</li>
+                        <li>.xls (Excel 97-2003)</li>
+                    </ul>
+                    <h5><i class="fas fa-lightbulb"></i> Tips</h5>
+                    <ul>
+                        <li>File should contain employee names in a column</li>
+                        <li>Common column names: "Name", "Employee Name", "Caregiver", "Staff"</li>
+                        <li>Duplicate employees will be skipped automatically</li>
+                        <li>All imported employees start with 0 raffle entries</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Entry Modal -->
+    <div id="add-entry-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Raffle Entry</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h4 id="modal-employee-name"></h4>
+                <div class="entry-options">
+                    <div class="entry-category">
+                        <h5>High-Impact Actions (3 entries)</h5>
+                        <div class="entry-buttons">
+                            <button class="entry-btn" data-entries="3" data-activity="Perfect attendance for entire quarter">Perfect Attendance</button>
+                            <button class="entry-btn" data-entries="3" data-activity="Referral of new Care Professional">New Referral</button>
+                            <button class="entry-btn" data-entries="3" data-activity="Covered 5+ open/last-minute shifts">5+ Extra Shifts</button>
+                        </div>
+                    </div>
+                    <div class="entry-category">
+                        <h5>Strong Contributions (2 entries)</h5>
+                        <div class="entry-buttons">
+                            <button class="entry-btn" data-entries="2" data-activity="Covered 1-4 open/last-minute shifts">1-4 Extra Shifts</button>
+                            <button class="entry-btn" data-entries="2" data-activity="Completed required training on time">Training Complete</button>
+                            <button class="entry-btn" data-entries="2" data-activity="Went above and beyond">Above & Beyond</button>
+                            <button class="entry-btn" data-entries="2" data-activity="Participated in 2+ company events">2+ Events</button>
+                        </div>
+                    </div>
+                    <div class="entry-category">
+                        <h5>Everyday Excellence (1 entry)</h5>
+                        <div class="entry-buttons">
+                            <button class="entry-btn" data-entries="1" data-activity="Proper uniform and badge consistently">Proper Uniform</button>
+                            <button class="entry-btn" data-entries="1" data-activity="Care notes accurate and on time">Care Notes</button>
+                            <button class="entry-btn" data-entries="1" data-activity="Work anniversary this quarter">Work Anniversary</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

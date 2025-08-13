@@ -1,0 +1,33 @@
+HOME INSTEAD QUARTERLY RAFFLE DASHBOARD
+==========================================
+
+EASY SETUP INSTRUCTIONS:
+
+OPTION 1 - If you have Python/Anaconda:
+1. Double-click "setup_anaconda.bat" 
+2. Wait for it to install and start
+3. Open browser to: http://localhost:5000
+
+OPTION 2 - If you don't have Python:
+1. Install Python from: https://python.org/downloads/
+2. Check "Add to PATH" during installation
+3. Double-click "setup.bat"
+4. Open browser to: http://localhost:5000
+
+OPTION 3 - Use Anaconda Prompt:
+1. Open "Anaconda Prompt" from Start Menu
+2. Type: cd [path to this folder]
+3. Type: pip install -r requirements.txt
+4. Type: python app.py
+5. Open browser to: http://localhost:5000
+
+TROUBLESHOOTING:
+- Make sure Python is installed
+- Run as Administrator if needed
+- Check Windows firewall if needed
+
+FEATURES:
+- Add employees
+- Track raffle entries (1, 2, or 3 points)
+- View real-time dashboard
+- All data saved automatically
