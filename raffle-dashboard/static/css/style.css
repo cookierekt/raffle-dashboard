@@ -259,6 +259,16 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-warning {
+    background: #ffc107;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+}
+
 .btn-raffle {
     background: linear-gradient(135deg, #ff6b6b, #ff8e53);
     color: var(--white);

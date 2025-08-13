@@ -520,6 +520,9 @@ class RaffleDashboard {
                     <button class="btn btn-primary btn-small" onclick="dashboard.openAddEntryModal('${name}')">
                         <i class="fas fa-plus"></i> Add Entry
                     </button>
+                    <button class="btn btn-warning btn-small" onclick="dashboard.resetEmployeePoints('${name}')">
+                        <i class="fas fa-undo"></i> Reset to 0
+                    </button>
                     <button class="btn btn-danger btn-small" onclick="dashboard.deleteEmployee('${name}')">
                         <i class="fas fa-trash"></i> Delete
                     </button>
@@ -562,6 +565,29 @@ class RaffleDashboard {
             }
         } catch (error) {
             this.showAlert('Failed to add entry. Please try again.', 'error');
+        }
+    }
+
+    async resetEmployeePoints(employeeName) {
+        if (!confirm(`Are you sure you want to reset ${employeeName}'s raffle points to 0? This action cannot be undone.`)) {
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/employee/${encodeURIComponent(employeeName)}/reset_points`, {
+                method: 'POST'
+            });
+
+            const data = await response.json();
+
+            if (data.error) {
+                this.showAlert(data.error, 'error');
+            } else {
+                this.showAlert(`${employeeName}'s raffle points have been reset to 0`, 'success');
+                await this.loadEmployees();
+            }
+        } catch (error) {
+            this.showAlert('Failed to reset points. Please try again.', 'error');
         }
     }
 

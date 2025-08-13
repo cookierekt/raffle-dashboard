@@ -157,6 +157,22 @@ def delete_employee(employee_name):
         return jsonify({'success': True})
     return jsonify({'error': 'Employee not found'}), 404
 
+@app.route('/api/employee/<employee_name>/reset_points', methods=['POST'])
+def reset_employee_points(employee_name):
+    data = load_data()
+    if employee_name not in data['employees']:
+        return jsonify({'error': 'Employee not found'}), 404
+    
+    data['employees'][employee_name]['entries'] = 0
+    data['employees'][employee_name]['activities'].append({
+        'activity': 'Points reset to 0',
+        'entries': 0,
+        'date': datetime.now().isoformat()
+    })
+    
+    save_data(data)
+    return jsonify({'success': True, 'employee': data['employees'][employee_name]})
+
 @app.route('/api/reset', methods=['POST'])
 def reset_data():
     data = {'employees': {}}
